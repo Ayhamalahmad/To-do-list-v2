@@ -9,7 +9,7 @@ body {
     background: #F1F2FB;
     background: conic-gradient(from 225deg, #F1F2FB, #474CFF)no-repeat center;
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 body::after,
@@ -26,7 +26,7 @@ body::before {
 
 .container {
     width: 500px;
-    height: 100%;
+    height: 100vh;
     margin: 20px auto;
     display: flex;
     flex-direction: column;
