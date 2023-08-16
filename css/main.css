@@ -59,8 +59,8 @@ body::before {
 .form::before {
     content: url(../images/ovalShadow.793e2be7.svg);
     position: absolute;
-    top: 79px;
-    right: -56%;
+    top: 122px;
+    right: -2%;
 }
 
 .title {
