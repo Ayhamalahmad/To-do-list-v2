@@ -1,6 +1,32 @@
 let input = document.querySelector(".input");
 let submit = document.querySelector(".add");
 let taskdiv = document.querySelector(".tasks");
+let taskChild = taskdiv.querySelectorAll(".task");
+// Create a new MutationObserver instance
+const observer = new MutationObserver((mutationsList, observer) => {
+  for (const mutation of mutationsList) {
+    if (mutation.type === "childList") {
+      handleChildChanges();
+    }
+  }
+});
+
+// Start observing the taskdiv for changes in child elements
+observer.observe(taskdiv, { childList: true });
+
+// Initial check and handling
+handleChildChanges();
+
+// Function to handle child changes and apply the "active" class
+function handleChildChanges() {
+  const taskChild = taskdiv.children;
+
+  if (taskChild.length === 0) {
+    taskdiv.classList.remove("active");
+  } else if (taskChild.length !== 0) {
+    taskdiv.classList.add("active");
+  }
+}
 
 // empty Array to Store The Tasks
 let arrayofTask = [];
@@ -13,12 +39,12 @@ if (localStorage.getItem("tasks")) {
 getDAtaFromLocalStorage();
 
 // add task
-submit.onclick = function () {
+submit.addEventListener("click", ()=>{
   if (input.value !== "") {
     addTaskToArray(input.value); // Add TAsk To Array Of Tasks
     input.value = ""; // Empty Input Field
   }
-};
+})
 // Click On  Task Element
 taskdiv.addEventListener("click", (e) => {
   //delete

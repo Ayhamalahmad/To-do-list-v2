@@ -187,11 +187,12 @@ h1 {
     color: black;
 }
 /* When The Task Container Is Empty Disable It */
-.tasks:empty {
+/* .tasks:empty {
     display: none;
-}
+} */
 
 .tasks {
+    display: none;
     background-color: #F1F2FB;
     margin-top: 30px;
     border-radius: 6px;
@@ -204,7 +205,9 @@ h1 {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
-
+.tasks.active{
+    display: initial;
+}
 .tasks .task {
     will-change: background-color;
     background-color: white;
