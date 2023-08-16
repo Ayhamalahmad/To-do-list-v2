@@ -2,6 +2,7 @@ let input = document.querySelector(".input");
 let submit = document.querySelector(".add");
 let taskdiv = document.querySelector(".tasks");
 let taskChild = taskdiv.querySelectorAll(".task");
+
 // Create a new MutationObserver instance
 const observer = new MutationObserver((mutationsList, observer) => {
   for (const mutation of mutationsList) {
@@ -43,6 +44,15 @@ submit.addEventListener("click", () => {
   if (input.value !== "") {
     addTaskToArray(input.value); // Add TAsk To Array Of Tasks
     input.value = ""; // Empty Input Field
+  }
+});
+// Add task entry when the Enter key is pressed
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    if (input.value !== "") {
+      addTaskToArray(input.value); // Add TAsk To Array Of Tasks
+      input.value = ""; // Empty Input Field
+    }
   }
 });
 // Click On  Task Element
