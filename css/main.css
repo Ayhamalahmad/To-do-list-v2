@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F1F2FB;
+    background: conic-gradient(from 225deg, #F1F2FB, #474CFF)no-repeat center;
+    position: relative;
+    height: 100vh;
+}
+
+body::after,
+body::before {
+    content: url(../images/ovalShadow.793e2be7.svg);
+    position: absolute;
+    top: 13px;
+}
+
+body::before {
+    right: 61%;
+    top: 50%;
+}
+
+.container {
+    width: 500px;
+    height: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+}
+
+.form {
+    background-color: #F1F2FB;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    /*  */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.form::before {
+    content: url(../images/ovalShadow.793e2be7.svg);
+    position: absolute;
+    top: 79px;
+    right: -56%;
+}
+
+.title {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    gap: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 10px;
+
+
+
+}
+
+h1 {
+    margin: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-image: linear-gradient(305deg, tomato, gold, cyan);
+    font-size: 60px;
+
+}
+
+/* blob */
+
+.blob {
+    position: absolute;
+    top: 0%;
+    left: 17%;
+    width: 137px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 1;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite ease;
+    transform-origin: center center;
+    z-index: -8;
+
+}
+
+
+@keyframes blob-bounce {
+
+    0%,
+    100% {
+        transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(25%);
+    }
+
+    50% {
+        transform: translateX(50%);
+    }
+
+    75% {
+        transform: translateX(75%);
+    }
+
+    85% {
+        transform: translateX(85%);
+    }
+
+    95% {
+        transform: translateX(-95%);
+    }
+}
+
+/* blob */
+
+.icon {
+    background: rgba(212, 209, 224, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(19.5px);
+    -webkit-backdrop-filter: blur(19.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 5px;
+}
+
+.sphere {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+}
+
+
+.input {
+    padding: 10px 15px;
+    border-radius: 6px;
+    flex: 1;
+    border: 2px #818CF8 solid;
+    border-radius: 5px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+/* input */
+
+/* input */
+.add {
+    border: none;
+    font-size: 15px;
+    background-color: #474BFF;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition:all .3s ;
+}
+.add:hover{
+    background-color: #D7E5E8;
+    color: black;
+}
+/* When The Task Container Is Empty Disable It */
+.tasks:empty {
+    display: none;
+}
+
+.tasks {
+    background-color: #F1F2FB;
+    margin-top: 30px;
+    border-radius: 6px;
+    padding: 20px;
+    color: #26274b;
+    background: rgba(241, 242, 251, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.tasks .task {
+    will-change: background-color;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.tasks .task:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.tasks .task:hover {
+    background-color: #f7f7f7;
+}
+
+.tasks .task.done {
+    opacity: 0.5;
+}
+
+.tasks .task span {
+    will-change: background-color;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #e62222;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 1px 5px .2px #00000035;
+    transition: background-color .3s;
+}
+
+.tasks .task span:hover {
+    background-color: #A50000;
+}
