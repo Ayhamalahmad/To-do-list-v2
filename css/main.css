@@ -36,7 +36,7 @@ body::before {
 
 @media (max-width: 767px) {
     .container {
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -180,12 +180,14 @@ h1 {
     cursor: pointer;
     font-weight: bold;
     letter-spacing: 1px;
-    transition:all .3s ;
+    transition: all .3s;
 }
-.add:hover{
+
+.add:hover {
     background-color: #D7E5E8;
     color: black;
 }
+
 /* When The Task Container Is Empty Disable It */
 /* .tasks:empty {
     display: none;
@@ -205,9 +207,11 @@ h1 {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.tasks.active{
+
+.tasks.active {
     display: initial;
 }
+
 .tasks .task {
     will-change: background-color;
     background-color: white;

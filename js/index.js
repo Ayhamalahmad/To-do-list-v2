@@ -39,12 +39,12 @@ if (localStorage.getItem("tasks")) {
 getDAtaFromLocalStorage();
 
 // add task
-submit.addEventListener("click", ()=>{
+submit.addEventListener("click", () => {
   if (input.value !== "") {
     addTaskToArray(input.value); // Add TAsk To Array Of Tasks
     input.value = ""; // Empty Input Field
   }
-})
+});
 // Click On  Task Element
 taskdiv.addEventListener("click", (e) => {
   //delete
