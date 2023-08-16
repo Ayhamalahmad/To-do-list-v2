@@ -1,5 +1,4 @@
-# To-Do List Application v2
-
+# To-Do List Application 
 
 This is a simple To-Do List application built using HTML, CSS, and JavaScript. The application allows users to add tasks, mark them as completed, and delete them. The tasks are stored in Local Storage, ensuring persistence even if the user closes or refreshes the page.
 
@@ -27,10 +26,9 @@ The application's code is implemented using the following functions:
 
 - `toggleStatusTaskWith`: This function toggles the completion status of a task between true and false and updates the Local Storage accordingly.
 
-## Usage
 
-To use the To-Do List application, simply open the index.html file in your web browser. You can then start adding tasks, marking them as completed, and deleting them as needed.
 
 ## Live Demo
 
-You can access a live demo of the To-Do List application using this link: [To-Do List Application](https://ayhamalahmad.github.io/to-do/)
+You can access a live demo of the To-Do List application using this link: [To-Do List Application](https://ayhamalahmad.github.io/To-do-list-v2/)
+
